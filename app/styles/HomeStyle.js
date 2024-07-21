@@ -1,4 +1,6 @@
-export const HomeStyle = {
+import { StyleSheet } from "react-native";
+
+export const HomeStyle = StyleSheet.create({
   container: {
     flex: 1,
     zIndex: 10,
@@ -47,4 +49,4 @@ export const HomeStyle = {
     color: "black",
     fontWeight: 500,
   },
-};
+});
