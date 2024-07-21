@@ -9,10 +9,9 @@ import {
 } from "react-native";
 import movieBgImage from "../images/moviebuffBG.jpg";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <View style={HomeStyle.container}>
-      <StatusBar hidden />
       <ImageBackground
         style={HomeStyle.bgImage}
         source={movieBgImage}
@@ -26,7 +25,7 @@ const Home = () => {
 
         <Pressable
           style={HomeStyle.button}
-          onPress={() => Alert.alert("enter here")}
+          onPress={() => navigation.navigate("Movies")}
         >
           <Text style={HomeStyle.buttonText}>Click to Enter</Text>
         </Pressable>
