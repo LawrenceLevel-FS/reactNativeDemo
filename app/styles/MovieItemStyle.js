@@ -19,4 +19,24 @@ export const MovieItemStyle = StyleSheet.create({
     justifyContent: "center",
     flex: 1,
   },
+  input: {
+    fontSize: 20,
+    borderColor: "black",
+    borderWidth: 1,
+    borderStyle: "solid",
+    marginBottom: 20,
+    padding: 8,
+    borderRadius: 6,
+    color: "gray",
+    textAlign: "center",
+  },
+  Text: {
+    fontSize: 20,
+    marginBottom: 2,
+  },
+  updateTitle: {
+    marginBottom: 40,
+    fontSize: 40,
+    color: "orange",
+  },
 });

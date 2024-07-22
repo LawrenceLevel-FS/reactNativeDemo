@@ -82,6 +82,8 @@ const MovieItem = ({ movie, deleteMovie, getMovies }) => {
       {/* EDIT SCREEN BELOW */}
       <Modal visible={isEditMode} animationType="slide">
         <View style={MovieItemStyle.modalContent}>
+          <Text style={MovieItemStyle.updateTitle}>Update Movie</Text>
+          <Text style={MovieItemStyle.Text}>Title:</Text>
           <TextInput
             style={MovieItemStyle.input}
             placeholder="Title"
@@ -90,6 +92,7 @@ const MovieItem = ({ movie, deleteMovie, getMovies }) => {
               setUpdatedMovie({ ...updatedMovie, title: text })
             }
           />
+          <Text style={MovieItemStyle.Text}>Director: </Text>
           <TextInput
             style={MovieItemStyle.input}
             placeholder="Director"
@@ -98,6 +101,7 @@ const MovieItem = ({ movie, deleteMovie, getMovies }) => {
               setUpdatedMovie({ ...updatedMovie, director: text })
             }
           />
+          <Text style={MovieItemStyle.Text}>Release Year: </Text>
           <TextInput
             style={MovieItemStyle.input}
             placeholder="Release Year"
