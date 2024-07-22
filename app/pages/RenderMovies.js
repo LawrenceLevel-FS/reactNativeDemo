@@ -25,8 +25,16 @@ const RenderMovies = ({ navigation }) => {
     getMovies();
   }, []);
 
+  const deleteMovie = (id) => {
+    setMovies((prevMovies) =>
+      prevMovies.movies.filter((movie) => movie._id !== id)
+    );
+  };
+
   const renderItem = ({ item }) => {
-    return <MovieItem movie={item} />;
+    return (
+      <MovieItem getMovies={getMovies} deleteMovie={deleteMovie} movie={item} />
+    );
   };
 
   return (
@@ -52,6 +60,7 @@ const RenderMovies = ({ navigation }) => {
           data={movies.movies}
           renderItem={renderItem}
           keyExtractor={(item) => item._id}
+          inverted
         />
       </SafeAreaView>
     </SafeAreaView>
