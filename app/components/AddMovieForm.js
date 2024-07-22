@@ -30,7 +30,6 @@ const AddMovieForm = ({ getMovies }) => {
         body: JSON.stringify({ movie: form }),
       }).then((res) =>
         res.json().then((data) => {
-          console.log(data);
           setForm({ title: "", director: "", releaseYear: "" });
           getMovies();
         })

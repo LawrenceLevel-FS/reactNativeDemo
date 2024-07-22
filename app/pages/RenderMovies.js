@@ -15,7 +15,6 @@ const RenderMovies = ({ navigation }) => {
       const response = await fetch("http://localhost:3001/apiv1/movies");
       const data = await response.json();
       setMovies(data);
-      console.log(data);
     } catch (error) {
       console.log({ error: error.message });
     }
