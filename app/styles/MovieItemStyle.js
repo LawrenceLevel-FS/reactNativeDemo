@@ -1,4 +1,6 @@
-export const MovieItemStyle = {
+import { StyleSheet } from "react-native";
+
+export const MovieItemStyle = StyleSheet.create({
   container: {
     borderStyle: "solid",
     borderWidth: 3,
@@ -12,4 +14,9 @@ export const MovieItemStyle = {
     fontSize: 30,
     fontWeight: 500,
   },
-};
+  modalContent: {
+    alignSelf: "center",
+    justifyContent: "center",
+    flex: 1,
+  },
+});
