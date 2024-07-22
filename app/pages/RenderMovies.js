@@ -53,7 +53,7 @@ const RenderMovies = ({ navigation }) => {
       </Pressable>
       <Text style={RenderMoviesStyle.movieTitleScreen}>All Movies</Text>
       <View>
-        <AddMovieForm />
+        <AddMovieForm getMovies={getMovies} />
       </View>
       <SafeAreaView>
         <FlatList

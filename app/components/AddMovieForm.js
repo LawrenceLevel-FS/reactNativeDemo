@@ -2,7 +2,7 @@ import { useState } from "react";
 import { View, TextInput, Text, Pressable } from "react-native";
 import { AddMovieFormStyle } from "../styles/AddMovieFromStyle";
 
-const AddMovieForm = () => {
+const AddMovieForm = ({ getMovies }) => {
   const [form, setForm] = useState({
     title: "",
     director: "",
@@ -28,7 +28,13 @@ const AddMovieForm = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ movie: form }),
-      }).then((res) => res.json().then((data) => console.log(data)));
+      }).then((res) =>
+        res.json().then((data) => {
+          console.log(data);
+          setForm({ title: "", director: "", releaseYear: "" });
+          getMovies();
+        })
+      );
     } catch (error) {
       setError(error.message || "Unexpected Error");
     } finally {

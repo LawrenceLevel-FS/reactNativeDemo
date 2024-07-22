@@ -14,4 +14,9 @@ export const MovieItemStyle = StyleSheet.create({
     fontSize: 30,
     fontWeight: 500,
   },
+  modalContent: {
+    alignSelf: "center",
+    justifyContent: "center",
+    flex: 1,
+  },
 });
